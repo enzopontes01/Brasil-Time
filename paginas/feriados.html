@@ -35,7 +35,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="holidays-page">
+  <body class="pagina-feriados">
     <nav class="navbar">
       <div class="nav-container">
         <a href="../index.html" class="nav-brand" aria-label="Brasil Time">
@@ -53,13 +53,13 @@
             <a href="../index.html" class="nav-link">Rel&oacute;gio</a>
           </li>
           <li class="nav-item">
-            <a href="stopwatch.html" class="nav-link">Cron&ocirc;metro</a>
+            <a href="cronometro.html" class="nav-link">Cronômetro</a>
           </li>
           <li class="nav-item">
-            <a href="timer.html" class="nav-link">Temporizador</a>
+            <a href="temporizador.html" class="nav-link">Temporizador</a>
           </li>
           <li class="nav-item">
-            <a href="holidays.html" class="nav-link active">Feriados</a>
+            <a href="feriados.html" class="nav-link active">Feriados</a>
           </li>
           <li class="nav-item">
             <button
@@ -76,51 +76,57 @@
     </nav>
 
     <div class="container">
-      <section class="holidays-section">
-        <div class="holidays-header">
+      <section class="secao-feriados">
+        <div class="cabecalho-feriados">
           <div>
-            <h2 id="holidaysTitle">Feriados e pontos facultativos do Brasil</h2>
-            <p id="holidaysDescription">
+            <h2 id="tituloFeriados">
+              Feriados e pontos facultativos do Brasil
+            </h2>
+            <p id="descricaoFeriados">
               Calend&aacute;rio nacional/federal com feriados oficiais e pontos
               facultativos. Datas estaduais e municipais variam conforme a
               localidade.
             </p>
           </div>
-          <span class="holidays-updated" id="holidaysUpdated"></span>
+          <span class="feriados-atualizado" id="feriadosAtualizado"></span>
         </div>
 
-        <div class="holidays-summary">
-          <div class="holidays-summary-item">
+        <div class="resumo-feriados">
+          <div class="item-resumo-feriados">
             <span class="info-label">Ano</span>
-            <strong class="holidays-summary-value" id="holidayYear">2026</strong>
+            <strong class="valor-resumo-feriados" id="anoFeriado">2026</strong>
           </div>
-          <div class="holidays-summary-item">
+          <div class="item-resumo-feriados">
             <span class="info-label">Exibindo</span>
-            <strong class="holidays-summary-value" id="holidayVisibleCount">0</strong>
+            <strong class="valor-resumo-feriados" id="contadorVisiveis"
+              >0</strong
+            >
           </div>
-          <div class="holidays-summary-item">
-            <span class="info-label">J&aacute; ocorreram</span>
-            <strong class="holidays-summary-value" id="pastHolidayCount">0</strong>
+          <div class="item-resumo-feriados">
+            <span class="info-label">Já ocorreram</span>
+            <strong class="valor-resumo-feriados" id="contadorPassados"
+              >0</strong
+            >
           </div>
-          <div class="holidays-summary-item">
-            <span class="info-label">Pr&oacute;xima data</span>
-            <strong class="holidays-summary-value" id="nextHolidayLabel">
+          <div class="item-resumo-feriados">
+            <span class="info-label">Próxima data</span>
+            <strong class="valor-resumo-feriados" id="proximoFeriadoLabel">
               Carregando...
             </strong>
           </div>
         </div>
 
-        <div class="holiday-filter-bar" aria-label="Filtrar feriados">
-          <span class="holiday-filter-label">Filtrar por tipo</span>
-          <div class="holiday-filter-list" id="holidayFilters"></div>
+        <div class="barra-filtro" aria-label="Filtrar feriados">
+          <span class="label-filtro">Filtrar por tipo</span>
+          <div class="lista-filtros" id="filtrosFeriados"></div>
         </div>
 
-        <div class="holiday-list" id="holidayList"></div>
+        <div class="lista-feriados" id="listaFeriados"></div>
       </section>
     </div>
 
-    <script src="../scripts/theme.js"></script>
-    <script src="../scripts/holidays.js"></script>
+    <script src="../scripts/tema.js"></script>
+    <script src="../scripts/feriados.js"></script>
 
     <footer class="footer">
       <div class="footer-content">

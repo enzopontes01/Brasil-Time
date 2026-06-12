@@ -7,12 +7,11 @@
     <script>
       (() => {
         try {
-          const savedTheme = localStorage.getItem("brasilTimeTheme");
-
-          if (savedTheme === "dark" || savedTheme === "light") {
-            document.documentElement.dataset.theme = savedTheme;
+          const temaSalvo = localStorage.getItem("brasilTimeTheme");
+          if (temaSalvo === "dark" || temaSalvo === "light") {
+            document.documentElement.dataset.theme = temaSalvo;
           }
-        } catch (error) {}
+        } catch (erro) {}
       })();
     </script>
     <link rel="icon" type="image/x-icon" href="../estilos/favicon.ico?v=2" />
@@ -26,8 +25,8 @@
       rel="stylesheet"
     />
   </head>
-  <body class="timer-page">
-    <!-- Navigation Bar -->
+  <body class="pagina-temporizador">
+    <!-- Barra de Navegação -->
     <nav class="navbar">
       <div class="nav-container">
         <a href="../index.html" class="nav-brand" aria-label="Brasil Time">
@@ -45,13 +44,13 @@
             <a href="../index.html" class="nav-link">Relógio</a>
           </li>
           <li class="nav-item">
-            <a href="stopwatch.html" class="nav-link">Cronômetro</a>
+            <a href="cronometro.html" class="nav-link">Cronômetro</a>
           </li>
           <li class="nav-item">
-            <a href="timer.html" class="nav-link active">Temporizador</a>
+            <a href="temporizador.html" class="nav-link active">Temporizador</a>
           </li>
           <li class="nav-item">
-            <a href="holidays.html" class="nav-link">Feriados</a>
+            <a href="feriados.html" class="nav-link">Feriados</a>
           </li>
           <li class="nav-item">
             <button
@@ -67,76 +66,76 @@
       </div>
     </nav>
 
-    <!-- Main Content -->
+    <!-- Conteúdo Principal -->
     <div class="container">
-      <div class="timer-section">
-        <div class="timer-header">
+      <div class="secao-temporizador">
+        <div class="cabecalho-temporizador">
           <h2>Temporizador</h2>
           <p>Defina uma contagem regressiva para estudos, pausas e tarefas.</p>
         </div>
 
-        <div class="timer-display">
-          <span class="timer-time" id="timerDisplay">00:05:00</span>
-          <span class="timer-status" id="timerStatus">Pronto para iniciar</span>
+        <div class="visor-temporizador">
+          <span class="tempo-temporizador" id="visorTemporizador">00:05:00</span>
+          <span class="status-temporizador" id="statusTemporizador">Pronto para iniciar</span>
         </div>
 
-        <div class="timer-config">
-          <label class="timer-field">
+        <div class="config-temporizador">
+          <label class="campo-temporizador">
             <span>Horas</span>
-            <input type="number" id="hoursInput" min="0" max="99" value="0" />
+            <input type="number" id="inputHoras" min="0" max="99" value="0" />
           </label>
-          <label class="timer-field">
+          <label class="campo-temporizador">
             <span>Minutos</span>
-            <input type="number" id="minutesInput" min="0" max="59" value="5" />
+            <input type="number" id="inputMinutos" min="0" max="59" value="5" />
           </label>
-          <label class="timer-field">
+          <label class="campo-temporizador">
             <span>Segundos</span>
-            <input type="number" id="secondsInput" min="0" max="59" value="0" />
+            <input type="number" id="inputSegundos" min="0" max="59" value="0" />
           </label>
         </div>
 
-        <div class="timer-presets" aria-label="Tempos sugeridos">
-          <button type="button" class="btn btn-secondary preset-btn" data-minutes="5">
+        <div class="presets-temporizador" aria-label="Tempos sugeridos">
+          <button type="button" class="btn btn-secondary btn-preset" data-minutes="5">
             05 min
           </button>
-          <button type="button" class="btn btn-secondary preset-btn" data-minutes="15">
+          <button type="button" class="btn btn-secondary btn-preset" data-minutes="15">
             15 min
           </button>
-          <button type="button" class="btn btn-secondary preset-btn" data-minutes="25">
+          <button type="button" class="btn btn-secondary btn-preset" data-minutes="25">
             25 min
           </button>
-          <button type="button" class="btn btn-secondary preset-btn" data-minutes="45">
+          <button type="button" class="btn btn-secondary btn-preset" data-minutes="45">
             45 min
           </button>
         </div>
 
-        <p class="timer-note" id="timerNote">
+        <p class="nota-temporizador" id="notaTemporizador">
           Ajuste a duração e use Aplicar para definir uma nova contagem.
         </p>
 
-        <div class="controls timer-controls">
-          <button class="btn btn-primary" id="startPauseBtn">Iniciar</button>
-          <button class="btn btn-secondary" id="applyBtn">Aplicar</button>
-          <button class="btn btn-danger" id="resetBtn">Redefinir</button>
+        <div class="controls controles-temporizador">
+          <button class="btn btn-primary" id="btnIniciarPausar">Iniciar</button>
+          <button class="btn btn-secondary" id="btnAplicar">Aplicar</button>
+          <button class="btn btn-danger" id="btnRedefinir">Redefinir</button>
         </div>
 
-        <div class="timer-summary">
-          <div class="timer-summary-item">
+        <div class="resumo-temporizador">
+          <div class="item-resumo-temporizador">
             <span class="info-label">Tempo definido</span>
-            <strong class="timer-summary-value" id="configuredTime">00:05:00</strong>
+            <strong class="valor-resumo-temporizador" id="tempoDefinido">00:05:00</strong>
           </div>
-          <div class="timer-summary-item">
+          <div class="item-resumo-temporizador">
             <span class="info-label">Status</span>
-            <strong class="timer-summary-value" id="statusLabel">Parado</strong>
+            <strong class="valor-resumo-temporizador" id="rotuloStatus">Parado</strong>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="../scripts/theme.js"></script>
-    <script src="../scripts/timer.js"></script>
+    <script src="../scripts/tema.js"></script>
+    <script src="../scripts/temporizador.js"></script>
 
-    <!-- Footer -->
+    <!-- Rodapé -->
     <footer class="footer">
       <div class="footer-content">
         <p>&copy; 2026 Todos os direitos reservados</p>

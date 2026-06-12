@@ -266,28 +266,28 @@ button.nav-link:focus-visible {
   animation: fadeIn 0.5s ease-out;
 }
 
-.clock-page .container {
+.pagina-relogio .container {
   max-width: 980px;
   justify-content: center;
   gap: 22px;
   padding-block: 18px 12px;
 }
 
-.stopwatch-page .container {
+.pagina-cronometro .container {
   max-width: 720px;
   justify-content: center;
   align-items: center;
   padding-block: 16px 12px;
 }
 
-.timer-page .container {
+.pagina-temporizador .container {
   max-width: 720px;
   justify-content: center;
   align-items: center;
   padding-block: 16px 12px;
 }
 
-.holidays-page .container {
+.pagina-feriados .container {
   max-width: 1040px;
   justify-content: flex-start;
   align-items: center;
@@ -451,7 +451,7 @@ button.nav-link:focus-visible {
   transition: all 0.3s ease;
 }
 
-.clock-page .digital-clock {
+.pagina-relogio .digital-clock {
   width: min(100%, 900px);
   min-width: 0;
   padding: 54px 72px;
@@ -473,11 +473,11 @@ button.nav-link:focus-visible {
   font-variant-numeric: tabular-nums;
 }
 
-.clock-page .time {
+.pagina-relogio .time {
   font-size: clamp(4rem, 10vw, 8.4rem);
 }
 
-.clock-page .date {
+.pagina-relogio .date {
   font-size: 1.15rem;
 }
 
@@ -488,8 +488,8 @@ button.nav-link:focus-visible {
   letter-spacing: 0.5px;
 }
 
-/* ===== STOPWATCH SECTION ===== */
-.stopwatch-section {
+/* ===== SEÇÃO CRONÔMETRO ===== */
+.secao-cronometro {
   background: var(--bg-white);
   border-radius: 16px;
   padding: 30px;
@@ -497,7 +497,7 @@ button.nav-link:focus-visible {
   border: 1px solid var(--border);
 }
 
-.stopwatch-section h2 {
+.secao-cronometro h2 {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--text-dark);
@@ -505,7 +505,7 @@ button.nav-link:focus-visible {
   letter-spacing: -0.3px;
 }
 
-.stopwatch-display {
+.visor-cronometro {
   background: linear-gradient(
     135deg,
     var(--surface-accent-start) 0%,
@@ -518,7 +518,7 @@ button.nav-link:focus-visible {
   border: 1px solid var(--primary-light);
 }
 
-.stopwatch-time {
+.tempo-cronometro {
   font-family: "Inter", "Segoe UI", sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
@@ -528,7 +528,7 @@ button.nav-link:focus-visible {
   font-variant-numeric: tabular-nums;
 }
 
-.stopwatch-page .stopwatch-section {
+.pagina-cronometro .secao-cronometro {
   display: flex;
   flex-direction: column;
   width: min(100%, 680px);
@@ -536,7 +536,7 @@ button.nav-link:focus-visible {
   max-height: calc(100svh - 170px);
 }
 
-.timer-section {
+.secao-temporizador {
   width: min(100%, 680px);
   background: var(--bg-white);
   border-radius: 16px;
@@ -548,7 +548,7 @@ button.nav-link:focus-visible {
   gap: 20px;
 }
 
-.timer-header h2 {
+.cabecalho-temporizador h2 {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--text-dark);
@@ -556,12 +556,12 @@ button.nav-link:focus-visible {
   letter-spacing: -0.3px;
 }
 
-.timer-header p {
+.cabecalho-temporizador p {
   font-size: 0.95rem;
   color: var(--text-light);
 }
 
-.timer-display {
+.visor-temporizador {
   background: linear-gradient(
     135deg,
     var(--surface-accent-start) 0%,
@@ -576,7 +576,7 @@ button.nav-link:focus-visible {
   gap: 10px;
 }
 
-.timer-time {
+.tempo-temporizador {
   font-family: "Inter", "Segoe UI", sans-serif;
   font-size: clamp(3.2rem, 8vw, 5.6rem);
   font-weight: 800;
@@ -586,40 +586,40 @@ button.nav-link:focus-visible {
   font-variant-numeric: tabular-nums;
 }
 
-.timer-status {
+.status-temporizador {
   font-size: 0.98rem;
   font-weight: 600;
   color: var(--text-light);
 }
 
-.timer-status.is-running,
-.timer-summary-value.is-running {
+.status-temporizador.em-execucao,
+.valor-resumo-temporizador.em-execucao {
   color: var(--success);
 }
 
-.timer-status.is-paused,
-.timer-summary-value.is-paused {
+.status-temporizador.pausado,
+.valor-resumo-temporizador.pausado {
   color: var(--primary-dark);
 }
 
-.timer-status.is-finished,
-.timer-summary-value.is-finished {
+.status-temporizador.encerrado,
+.valor-resumo-temporizador.encerrado {
   color: var(--danger);
 }
 
-.timer-config {
+.config-temporizador {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
 }
 
-.timer-field {
+.campo-temporizador {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.timer-field span {
+.campo-temporizador span {
   font-size: 0.82rem;
   color: var(--text-light);
   font-weight: 600;
@@ -627,7 +627,7 @@ button.nav-link:focus-visible {
   letter-spacing: 0.5px;
 }
 
-.timer-field input {
+.campo-temporizador input {
   width: 100%;
   padding: 12px 14px;
   border: 1px solid var(--border);
@@ -643,39 +643,39 @@ button.nav-link:focus-visible {
     box-shadow 0.2s ease;
 }
 
-.timer-field input:focus {
+.campo-temporizador input:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 3px var(--input-focus-ring);
 }
 
-.timer-presets {
+.presets-temporizador {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.preset-btn {
+.btn-preset {
   flex: 0 0 auto;
   min-width: 86px;
 }
 
-.timer-note {
+.nota-temporizador {
   font-size: 0.92rem;
   color: var(--text-light);
   line-height: 1.5;
 }
 
-.timer-controls {
+.controles-temporizador {
   margin-bottom: 0;
 }
 
-.timer-summary {
+.resumo-temporizador {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
-.timer-summary-item {
+.item-resumo-temporizador {
   background: var(--bg-light);
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -685,13 +685,13 @@ button.nav-link:focus-visible {
   gap: 8px;
 }
 
-.timer-summary-value {
+.valor-resumo-temporizador {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-dark);
 }
 
-.holidays-section {
+.secao-feriados {
   width: min(100%, 980px);
   background: var(--bg-white);
   border-radius: 16px;
@@ -703,7 +703,7 @@ button.nav-link:focus-visible {
   gap: 24px;
 }
 
-.holidays-header {
+.cabecalho-feriados {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -711,26 +711,26 @@ button.nav-link:focus-visible {
   gap: 16px;
 }
 
-.holidays-header h2 {
+.cabecalho-feriados h2 {
   font-size: 1.35rem;
   font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 6px;
 }
 
-.holidays-header p,
-.holidays-updated {
+.cabecalho-feriados p,
+.feriados-atualizado {
   font-size: 0.95rem;
   color: var(--text-light);
 }
 
-.holidays-summary {
+.resumo-feriados {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 16px;
 }
 
-.holidays-summary-item {
+.item-resumo-feriados {
   background: linear-gradient(
     135deg,
     var(--surface-accent-start) 0%,
@@ -744,13 +744,13 @@ button.nav-link:focus-visible {
   gap: 8px;
 }
 
-.holidays-summary-value {
+.valor-resumo-feriados {
   font-size: 1.3rem;
   font-weight: 800;
   color: var(--primary-dark);
 }
 
-.holiday-filter-bar {
+.barra-filtro {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -766,7 +766,7 @@ button.nav-link:focus-visible {
   );
 }
 
-.holiday-filter-label {
+.label-filtro {
   font-size: 0.8rem;
   color: var(--text-light);
   font-weight: 700;
@@ -774,13 +774,13 @@ button.nav-link:focus-visible {
   letter-spacing: 0.5px;
 }
 
-.holiday-filter-list {
+.lista-filtros {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.holiday-filter-btn {
+.btn-filtro {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -801,19 +801,19 @@ button.nav-link:focus-visible {
     box-shadow 0.2s ease;
 }
 
-.holiday-filter-btn:hover {
+.btn-filtro:hover {
   transform: translateY(-1px);
   border-color: var(--primary);
   box-shadow: var(--shadow-soft);
 }
 
-.holiday-filter-btn.is-active {
+.btn-filtro.is-active {
   background: var(--primary);
   border-color: var(--primary);
   color: #ffffff;
 }
 
-.holiday-filter-count {
+.contagem-filtro {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -827,18 +827,18 @@ button.nav-link:focus-visible {
   font-weight: 700;
 }
 
-.holiday-filter-btn:not(.is-active) .holiday-filter-count {
+.btn-filtro:not(.is-active) .contagem-filtro {
   background: var(--primary-light);
   color: var(--primary-dark);
 }
 
-.holiday-list {
+.lista-feriados {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
-.holiday-card {
+.cartao-feriado {
   background: var(--bg-white);
   border: 1px solid var(--border);
   border-radius: 14px;
@@ -848,27 +848,27 @@ button.nav-link:focus-visible {
   gap: 14px;
 }
 
-.holiday-top {
+.topo-feriado {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
 }
 
-.holiday-heading {
+.titulo-feriado {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.holiday-name {
+.nome-feriado {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-dark);
   line-height: 1.35;
 }
 
-.holiday-type {
+.tipo-feriado {
   display: inline-flex;
   align-items: center;
   width: fit-content;
@@ -882,19 +882,19 @@ button.nav-link:focus-visible {
   letter-spacing: 0.4px;
 }
 
-.holiday-note {
+.nota-feriado {
   font-size: 0.88rem;
   color: var(--text-light);
   line-height: 1.45;
 }
 
-.holiday-date {
+.data-feriado {
   font-size: 0.95rem;
   color: var(--text-light);
   font-weight: 500;
 }
 
-.holiday-status {
+.status-feriado {
   display: inline-flex;
   align-items: center;
   width: fit-content;
@@ -904,28 +904,28 @@ button.nav-link:focus-visible {
   font-weight: 700;
 }
 
-.holiday-status.is-past {
+.status-feriado.is-past {
   background: rgba(16, 185, 129, 0.12);
   color: var(--success);
 }
 
-.holiday-status.is-future {
+.status-feriado.is-future {
   background: var(--primary-light);
   color: var(--primary-dark);
 }
 
-.holiday-status.is-today {
+.status-feriado.is-today {
   background: rgba(239, 68, 68, 0.12);
   color: var(--danger);
 }
 
-.holiday-metrics {
+.metricas-feriado {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
-.holiday-metric {
+.metrica-feriado {
   background: var(--bg-light);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -935,7 +935,7 @@ button.nav-link:focus-visible {
   gap: 6px;
 }
 
-.holiday-metric-label {
+.label-metrica {
   font-size: 0.74rem;
   color: var(--text-light);
   font-weight: 700;
@@ -943,31 +943,31 @@ button.nav-link:focus-visible {
   letter-spacing: 0.5px;
 }
 
-.holiday-metric-value {
+.valor-metrica {
   font-size: 1rem;
   font-weight: 700;
   color: var(--text-dark);
 }
 
-.holiday-metric-date {
+.data-metrica {
   font-size: 0.84rem;
   color: var(--text-light);
   font-weight: 500;
 }
 
-.holiday-actions {
+.acoes-feriado {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.holiday-link {
+.link-feriado {
   width: fit-content;
   min-width: 0;
   text-decoration: none;
 }
 
-.holiday-empty {
+.vazio-feriados {
   grid-column: 1 / -1;
   padding: 24px;
   border-radius: 14px;
@@ -1046,14 +1046,14 @@ button.nav-link:focus-visible {
   background: #dc2626;
 }
 
-/* ===== LAPS SECTION ===== */
-.laps-section {
+/* ===== SEÇÃO VOLTAS ===== */
+.secao-voltas {
   margin-top: 20px;
   min-height: auto;
   overflow: hidden;
 }
 
-.laps-list {
+.lista-voltas {
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -1062,7 +1062,7 @@ button.nav-link:focus-visible {
   padding-right: 4px;
 }
 
-.laps-header {
+.cabecalho-voltas {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
@@ -1077,7 +1077,7 @@ button.nav-link:focus-visible {
   margin-bottom: 8px;
 }
 
-.lap-item {
+.item-volta {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
@@ -1089,25 +1089,25 @@ button.nav-link:focus-visible {
   transition: background 0.2s ease;
 }
 
-.lap-item:hover {
+.item-volta:hover {
   background: var(--bg-light);
 }
 
-.lap-item:last-child {
+.item-volta:last-child {
   border-bottom: none;
   border-radius: 0 0 8px 8px;
 }
 
-.lap-item:first-of-type {
+.item-volta:first-of-type {
   border-radius: 8px 8px 0 0;
 }
 
-.lap-item span:first-child {
+.item-volta span:first-child {
   font-weight: 600;
   color: var(--primary);
 }
 
-.lap-item span:last-child {
+.item-volta span:last-child {
   text-align: right;
   color: var(--text-dark);
   font-weight: 500;
@@ -1212,53 +1212,53 @@ button.nav-link:focus-visible {
     font-size: 4.6rem;
   }
 
-  .clock-page .digital-clock {
+  .pagina-relogio .digital-clock {
     padding: 42px 44px;
   }
 
-  .clock-page .time {
+  .pagina-relogio .time {
     font-size: clamp(3.8rem, 12vw, 6.5rem);
   }
 
-  .stopwatch-display {
+  .visor-cronometro {
     padding: 20px;
   }
 
-  .stopwatch-time {
+  .tempo-cronometro {
     font-size: 2rem;
   }
 
-  .timer-time {
+  .tempo-temporizador {
     font-size: clamp(2.8rem, 9vw, 4.7rem);
   }
 
-  .timer-config {
+  .config-temporizador {
     grid-template-columns: 1fr;
   }
 
-  .timer-summary {
+  .resumo-temporizador {
     grid-template-columns: 1fr;
   }
 
-  .holidays-summary,
-  .holiday-list {
+  .resumo-feriados,
+  .lista-feriados {
     grid-template-columns: 1fr;
   }
 
-  .holiday-filter-bar {
+  .barra-filtro {
     align-items: flex-start;
   }
 
-  .holiday-filter-list {
+  .lista-filtros {
     width: 100%;
   }
 
-  .holiday-filter-btn {
+  .btn-filtro {
     flex: 1 1 140px;
     justify-content: space-between;
   }
 
-  .holiday-metrics {
+  .metricas-feriado {
     grid-template-columns: 1fr;
   }
 
@@ -1268,8 +1268,8 @@ button.nav-link:focus-visible {
     font-size: 0.9rem;
   }
 
-  .laps-header,
-  .lap-item {
+  .cabecalho-voltas,
+  .item-volta {
     grid-template-columns: 0.6fr 1fr;
     padding: 10px 12px;
     gap: 12px;
@@ -1333,16 +1333,16 @@ button.nav-link:focus-visible {
     font-size: 3.35rem;
   }
 
-  .clock-page .digital-clock {
+  .pagina-relogio .digital-clock {
     width: 100%;
     padding: 28px 20px;
   }
 
-  .clock-page .time {
+  .pagina-relogio .time {
     font-size: clamp(3.1rem, 15vw, 4.7rem);
   }
 
-  .clock-page .date {
+  .pagina-relogio .date {
     font-size: 0.92rem;
     text-align: center;
   }
@@ -1351,88 +1351,88 @@ button.nav-link:focus-visible {
     font-size: 0.85rem;
   }
 
-  .stopwatch-section {
+  .secao-cronometro {
     padding: 20px;
   }
 
-  .stopwatch-section h2 {
+  .secao-cronometro h2 {
     font-size: 1.1rem;
     margin-bottom: 16px;
   }
 
-  .stopwatch-display {
+  .visor-cronometro {
     padding: 16px;
     margin-bottom: 16px;
   }
 
-  .stopwatch-time {
+  .tempo-cronometro {
     font-size: 1.8rem;
   }
 
-  .stopwatch-page .stopwatch-section {
+  .pagina-cronometro .secao-cronometro {
     max-height: calc(100svh - 150px);
   }
 
-  .timer-section {
+  .secao-temporizador {
     padding: 20px;
     gap: 16px;
   }
 
-  .timer-display {
+  .visor-temporizador {
     padding: 20px 16px;
   }
 
-  .timer-time {
+  .tempo-temporizador {
     font-size: clamp(2.5rem, 12vw, 3.7rem);
   }
 
-  .timer-status {
+  .status-temporizador {
     font-size: 0.88rem;
   }
 
-  .timer-note {
+  .nota-temporizador {
     font-size: 0.85rem;
   }
 
-  .holidays-section {
+  .secao-feriados {
     padding: 20px;
     gap: 18px;
   }
 
-  .holidays-header h2 {
+  .cabecalho-feriados h2 {
     font-size: 1.2rem;
   }
 
-  .holidays-updated,
-  .holidays-header p {
+  .feriados-atualizado,
+  .cabecalho-feriados p {
     font-size: 0.88rem;
   }
 
-  .holidays-summary-value {
+  .valor-resumo-feriados {
     font-size: 1.15rem;
   }
 
-  .holiday-filter-bar {
+  .barra-filtro {
     padding: 14px;
   }
 
-  .holiday-filter-btn {
+  .btn-filtro {
     width: 100%;
   }
 
-  .holiday-card {
+  .cartao-feriado {
     padding: 16px;
   }
 
-  .holiday-top {
+  .topo-feriado {
     flex-direction: column;
   }
 
-  .holiday-name {
+  .nome-feriado {
     font-size: 0.98rem;
   }
 
-  .holiday-date {
+  .data-feriado {
     font-size: 0.88rem;
   }
 
@@ -1445,15 +1445,15 @@ button.nav-link:focus-visible {
     font-size: 0.85rem;
   }
 
-  .laps-header,
-  .lap-item {
+  .cabecalho-voltas,
+  .item-volta {
     grid-template-columns: 1fr 1fr;
     padding: 8px 10px;
     gap: 8px;
     font-size: 0.85rem;
   }
 
-  .laps-header {
+  .cabecalho-voltas {
     font-size: 0.75rem;
   }
 

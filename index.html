@@ -35,7 +35,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="clock-page">
+  <body class="pagina-relogio">
     <!-- Navigation Bar -->
     <nav class="navbar">
       <div class="nav-container">
@@ -54,13 +54,15 @@
             <a href="index.html" class="nav-link active">Relógio</a>
           </li>
           <li class="nav-item">
-            <a href="paginas/stopwatch.html" class="nav-link">Cronômetro</a>
+            <a href="paginas/cronometro.html" class="nav-link">Cronômetro</a>
           </li>
           <li class="nav-item">
-            <a href="paginas/timer.html" class="nav-link">Temporizador</a>
+            <a href="paginas/temporizador.html" class="nav-link"
+              >Temporizador</a
+            >
           </li>
           <li class="nav-item">
-            <a href="paginas/holidays.html" class="nav-link">Feriados</a>
+            <a href="paginas/feriados.html" class="nav-link">Feriados</a>
           </li>
           <li class="nav-item">
             <button
@@ -86,8 +88,8 @@
       <!-- Relógio Digital -->
       <div class="clock-section">
         <div class="digital-clock">
-          <span class="time" id="resultado">00:00:00</span>
-          <span class="date" id="data-completa">Terça-feira, 28 de abril</span>
+          <span class="time" id="hora">00:00:00</span>
+          <span class="date" id="data">Terça-feira, 28 de abril</span>
         </div>
       </div>
 
@@ -95,7 +97,7 @@
       <div class="info-footer">
         <div class="info-item">
           <span class="info-label">Fuso Horário</span>
-          <span class="info-value" id="timezone-value">BRT</span>
+          <span class="info-value" id="fusoHorario">BRT</span>
         </div>
         <div class="info-item">
           <span class="info-label">Origem</span>
@@ -104,8 +106,8 @@
       </div>
     </div>
 
-    <script src="scripts/theme.js"></script>
-    <script src="scripts/Clock.js"></script>
+    <script src="scripts/tema.js"></script>
+    <script src="scripts/relogio.js"></script>
 
     <!-- Footer -->
     <footer class="footer">
